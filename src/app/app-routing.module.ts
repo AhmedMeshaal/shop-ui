@@ -5,6 +5,7 @@ import { AboutUsComponent } from "./about-us/about-us.component";
 import { ContactUsComponent } from "./contact-us/contact-us.component";
 import { HomeComponent } from "./home/home.component";
 
+
 const routes: Routes = [
   { path: 'products', component: ProductsComponent, title: 'PRODUCTS'},
   { path: 'about-us', component: AboutUsComponent, title: 'ABOUT US'},
@@ -15,6 +16,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
+  declarations: [],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

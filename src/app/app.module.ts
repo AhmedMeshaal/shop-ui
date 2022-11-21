@@ -9,6 +9,9 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomeComponent } from './home/home.component';
 import { NavHeaderComponent } from './layout/nav-header/nav-header.component';
 import { FooterComponent } from './layout/footer/footer.component';
+import { BannerComponent } from './home-sections/banner/banner.component';
+import { CategoryComponent } from './home-sections/category/category.component';
+import { FeaturedComponent } from './home-sections/featured/featured.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +21,14 @@ import { FooterComponent } from './layout/footer/footer.component';
     ContactUsComponent,
     HomeComponent,
     NavHeaderComponent,
-    FooterComponent
+    FooterComponent,
+    BannerComponent,
+    CategoryComponent,
+    FeaturedComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
