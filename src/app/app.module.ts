@@ -15,6 +15,7 @@ import { FeaturedComponent } from './home-sections/featured/featured.component';
 import { BrandComponent } from './product/brand/brand.component';
 import { SingleProductComponent } from './product/single-product/single-product.component';
 import { RelatedProductsComponent } from './product/related-products/related-products.component';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { RelatedProductsComponent } from './product/related-products/related-pro
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
