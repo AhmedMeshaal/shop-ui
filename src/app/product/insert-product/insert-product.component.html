@@ -1,0 +1,50 @@
+<!-- Start Contact -->
+<div class="container py-5">
+  <div class="row py-5">
+    <form class="col-md-9 m-auto" method="post" role="form" [formGroup]="frmGroupProduct">
+      <div class="row">
+        <div class="form-group col-md-6 mb-3">
+          <label>Product Name</label>
+          <input type="text" class="form-control mt-1" name="product_name" formControlName="product_name" placeholder="Product Name">
+        </div>
+        <div class="form-group col-md-6 mb-3">
+          <label>Product Price</label>
+          <input type="number" min="0.00" max="10000.00" step="0.01" class="form-control mt-1" name="product_price" formControlName="product_price" placeholder="00.00">
+        </div>
+      </div>
+      <div class="mb-3">
+        <label>Product Quantity</label>
+        <input type="number" min="0" max="100" class="form-control mt-1" name="product_quantity" formControlName="product_quantity" placeholder="Quantity">
+      </div>
+      <div class="form-group col-md-6 mb-3">
+        <label>Select product size</label>
+        <select class="form-control mt-1 dropdown-header" name="size" formControlName="size">
+          <option value="">Size</option>
+          <option value="Small" class="dropdown-item">Small</option>
+          <option value="Medium">Medium</option>
+          <option value="Large">Large</option>
+          <option value="X-large">X-large</option>
+          <option value="2X-large">2X-large</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label>Status</label>
+        <select class="form-control mt-1 dropdown-header" name="status" formControlName="status">
+          <option value="Available">Available</option>
+          <option value="Not-Available" class="dropdown-item">Not-Available</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label>Product Quantity</label>
+        <textarea class="form-control mt-1" name="product_description" formControlName="product_description" placeholder="Message" rows="8"></textarea>
+      </div>
+      <div class="row">
+        <div class="col text-end mt-2">
+          <button type="button" class="btn btn-success btn-lg px-3" (click)="clickSubmit()">Insert Product</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- End Contact -->
+

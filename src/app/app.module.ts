@@ -17,6 +17,12 @@ import { SingleProductComponent } from './product/single-product/single-product.
 import { RelatedProductsComponent } from './product/related-products/related-products.component';
 import { HttpClientModule } from "@angular/common/http";
 
+import { ReactiveFormsModule, FormsModule } from "@angular/forms";
+import { InsertProductComponent } from './product/insert-product/insert-product.component';
+
+
+import { AlertModule } from "ngx-alerts";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,12 +37,16 @@ import { HttpClientModule } from "@angular/common/http";
     FeaturedComponent,
     BrandComponent,
     SingleProductComponent,
-    RelatedProductsComponent
+    RelatedProductsComponent,
+    InsertProductComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
+    AlertModule.forRoot({maxMessages: 5, timeout: 5000, positionX: "right"})
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
-import {Observable} from "rxjs";
-import {API_SERVER_URL} from "../../environments/environment";
+import { Observable, BehaviorSubject, Subject } from "rxjs";
+import { API_SERVER_URL } from "../../environments/environment";
 import {tap} from "rxjs/operators";
 
 
@@ -23,5 +23,21 @@ export class ProductService {
       })
     );
   }
+
+  save_product(product_info:any): Observable<any> {
+    return this.httpClient.post(`${API_SERVER_URL}/api/products/save_product`, product_info).pipe(
+      tap(async (res: any) =>{
+        console.log(res);
+      })
+    );
+  }
+
+  // load_documents (ProductID): Observable<any> {
+  //   return this.httpClient.get(`${API_SERVER_URL}/api/products/load_documents/${ProductID}`).pipe(
+  //     tap(async (res: any) =>{
+  //       console.log(res);
+  //     })
+  //   );
+  // }
 
 }
